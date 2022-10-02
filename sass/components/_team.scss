@@ -1,0 +1,74 @@
+.team{
+    background-color: $team-cl;
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+.team__title{
+    font-size: 36px;
+    line-height: calc(42/36);
+    color: $main-text-cl;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.team__list{
+    display: flex;
+    text-align: center;
+    gap: 30px;
+}
+.team-item{
+    width: 270px;
+    background-color:$title-cl ;
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.team__social-list{
+    display: flex;
+    text-align: center;
+}
+.team__social-item {
+    width: 44px;
+    height: 44px;
+    margin-right: 10px;
+
+    &:last-child {
+    margin-right: 0px;
+}}
+.team__social-link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: $title-cl;
+  fill:$icon-team ;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+
+  &:hover,
+&:focus {
+  background-color: $accent-cl;
+  cursor: pointer;
+  fill: $title-cl;
+}}
+.team__card{
+    padding: 30px;
+}
+.team__name{
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: calc(19 / 16);
+    color: $main-text-cl;
+    font-weight: 500;
+    text-align: center;
+}
+.team__aside{ 
+    font-size: 16px;
+    line-height: calc(19 / 16);
+    color: $link-cl;
+    text-align: center;
+    margin-bottom: 16px;
+    }
+

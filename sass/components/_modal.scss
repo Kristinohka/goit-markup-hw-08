@@ -1,0 +1,206 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity 1400ms linear,visibility 1400ms linear;
+  &.is-hidden{
+     opacity: 0;
+     visibility: hidden;
+     pointer-events: none; 
+     .modal{
+        opacity: 0;
+         transform: translate(-50%, -50%) scale(1) rotate(0deg);
+     }
+  }
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  height: 581px;
+  background: $title-cl;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: transform 1500ms ease-in-out, opacity 1500ms;
+  padding: 40px;
+
+  &__btn{
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+
+  background-color: $title-cl;
+  border: 1px solid $logo-cl;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+   fill:$act-hero-btn ;
+}}}
+
+.modal__icon:hover,
+.modal__icon:focus{
+    fill:$act-hero-btn ;
+}
+
+// Register form
+
+.register-form__title{
+    display: block;
+    font-size: 20px;
+    margin-bottom: 12px;
+    line-height: calc(23/20);
+    text-align: center;
+    letter-spacing: 0.03em;
+    color:$main-text-cl;
+}
+.register-form__group{
+    margin-bottom: 20px;
+}
+.register-form__field{
+    position: relative;
+    display: block;
+    margin-bottom:10px; ;
+    text-align: left;
+
+    &:last-child { 
+    margin-bottom: 0;
+}}
+
+.register-form__label{
+    display: block;
+    line-height: calc(14/12);
+    font-size: 12px;
+    margin-bottom: 4px;
+    color: $link-cl;
+}
+.register-form__input{
+    width: 100%;
+    height: 40px;
+    padding-left: 42px;
+    padding-right: 42px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: transparent;
+    transition: border-color 400ms cubic-bezier(0.4, 0, 0.2,1);
+
+    &:focus,
+    &:hover {
+   border-color: $act-hero-btn;
+}
+    &:focus~.register-form__icon,
+    &:hover~.register-form__icon {
+    fill: $accent-cl;
+}
+
+}
+.register-form__icon{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transition: fill 400ms cubic-bezier(0.4, 0, 0.2,1);
+}
+.register-form__massage{
+    display: block;
+    width: 100%;
+    height: 120px;
+    padding: 18px;
+    font-size: 14px;
+    resize: none;
+    outline: transparent;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    &::placeholder {
+  font-size: 12px;
+}
+    &:hover,
+    &:focus{
+     border-color: $act-hero-btn;}
+
+}
+
+.register-form__agreement{
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+margin-bottom: 30px;
+}
+.register-form__btn{
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    border-radius: 4px;
+    padding: 10px 52px;
+    min-width: 200px;
+    min-height: 50px;
+    display: block;
+    margin: 0 auto;
+    background-color: $act-hero-btn;
+    color: $title-cl;
+    text-align: center;
+    border: 0;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+  background-color:$act-hero-btn;
+}
+}
+
+.register-form__checkbox {
+    display: block;
+    width: 14px;
+    height: 14px;
+    left: 68px; ;
+    border-radius: 1px solid $logo-cl;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    &:checked + .register-form__icons .icon-unchecked {
+  opacity: 0;
+}
+    &:checked + .register-form__icons .icon-checked {
+  opacity: 1;
+}
+   
+}
+
+.icon-checked {
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.icon-unchecked {
+    display: block;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 1px solid $main-bg-cl;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.register-form__desc {
+  font-size: 14px;
+  user-select: none;
+  margin-right: 37px;
+}
+
+.register-form__link {
+  color: $accent-cl;
+}
+

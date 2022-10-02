@@ -1,0 +1,17 @@
+@import "./utils/variables";
+@import "./base/base";
+@import "./components/header";
+@import "./components/hero";
+@import "./components/modal";
+@import "./components/features";
+@import "./components/about";
+@import "./components/team";
+@import "./components/clients";
+@import "./components/footer";
+@import "./components/goin";
+@import "./components/footer-form";
+@import "./components/portfolio";
+
+body{
+    background-color: #fff;
+}
