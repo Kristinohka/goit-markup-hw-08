@@ -1,6 +1,9 @@
 .goin{
-    margin-left: 70px;
-    align-items: baseline;
+  @media screen and (min-width: 1200px){
+        margin-left: 70px;
+        align-items: baseline;
+     }
+    
 }
 .goin__title{
   font-weight: 700;
@@ -14,6 +17,10 @@
 .goin__list{
   display: flex;
   justify-content: normal;
+  @media screen and (min-width:480px){
+  margin-bottom: 60px;
+  justify-content: center;
+}
 }
 .going__link{
     margin-right: 10px;;

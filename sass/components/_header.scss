@@ -5,18 +5,30 @@
 }
 .header__container{
     display: flex;
+    @media screen and (min-width:1200px) {
+    display: flex;
     align-items: center;
-}
+}}
 .logo{
- padding-top: 24px;
-    padding-bottom: 24px;
+    
     font-family: $secondary-font;
-    font-size: 26px;
-    line-height: calc(31 / 26);
     color: $accent-cl;
     font-weight: 700;
     letter-spacing: 0.03em;
     transition:color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (min-width:1200px) {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    font-size: 26px;
+    line-height: calc(31 / 26);
+    margin-right: 93px;}
+  @media screen and (min-width:480px) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: 24px;
+    line-height:calc(28 / 24);
+  }
 }
 .header-logo{
 padding-top: 24px;
@@ -25,20 +37,31 @@ color:$logo-cl;
 transition:color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header__nav{
-display: flex;
+display: none;
+  @media screen and (min-width:768px){
+    display: flex;
+  }
+  @media screen and (min-width:1200px) {
+  
+  justify-content: center;
+  }
+
 }
 .header__list{
-display: flex;
-    margin-left: 93px;
+   
+   @media screen and (min-width:768px) { 
+    display: flex;
     align-items: center;
     flex-direction: row;
+    margin-left: 88px;
 .header__item:not(:last-child){
-    margin-right: 50px;
+    margin-right: 50px;}
 }
 .current {
     content: '';
     position: relative;
-    color: $accent-cl;
+    &:hover, &:focus {
+    color: $accent-cl;}
 
     &::after{
   content: '';
@@ -64,8 +87,10 @@ display: flex;
 }
 
 .header-link {
+     @media screen and (min-width:768px) {
+    display: flex;
+  }
     color: $main-text-cl;
-    display: inline-block;
     padding-top: 32px;
     padding-bottom: 32px;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -79,32 +104,46 @@ display: flex;
 }
 
 .header__contacts{
-display: flex;
-    margin-left:auto;
-    color: $link-cl;
-    .header__contacts-item:not(:last-child){
-    margin-right: 50px;
+display: none;
+@media screen and (min-width:768px){
+    display: block;
+    margin-left: auto;
+    margin-top: 21px;
+    @media screen and (min-width:768px) {
+    gap: 10px;
+  &:last-child {
+  margin-bottom: 0;
+} 
+    
+  }
+  @media screen and (min-width:1200px) {
+    display: flex;
+    margin-left: auto;
+    flex-direction: row;
+    color: $link-cl;}
 }}
 
 .header__contacts-item{
     justify-content: center;
     align-items: center;
-}
+    @media screen and (min-width:1200px) {
+    margin-right: 50px;
+  &:last-child {
+  margin-right: 0;
+} 
+}}
 .header__contacts-link{
 background-size: contain;
     background-position: center;
      transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
      color: $link-cl;
-    display: flex;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    justify-content: center;
-    align-items: center;
+    text-decoration: none;
     font-size: 14px;
     line-height: calc(16 / 14);
     font-weight: 500;
     letter-spacing: 0.02em;
-
+    
+     
     &:hover,
     &:focus {
    color: $accent-cl;
@@ -112,6 +151,12 @@ background-size: contain;
    cursor: pointer;
    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);}
     
+   
+   @media screen and (min-width:1200px) {
+    display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;}
 }
 .header__icon{
     margin-right: 10px; 
