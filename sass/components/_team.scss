@@ -27,8 +27,7 @@
   flex-direction: row;
   flex-wrap: wrap;}
    @media screen and (min-width: 1200px){
-    @include flex(flex, null, null);
-            @include item(3, 30px, 4);
+    
         }
 }
 .team-item{
@@ -38,8 +37,6 @@
     width: 354px;}
      @media screen and (min-width: 1200px){
     width: 270px;
-    @include flex(flex, null, null);
-            @include item(3, 30px, 4);
         }
 
     background-color:$title-cl ;
