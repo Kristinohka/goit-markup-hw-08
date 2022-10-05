@@ -1,7 +1,7 @@
 .header{
     background-color: $title-cl;
     border: 1px solid #ECECEC;
-   
+   cursor: pointer;
 }
 .header__container{
     display: flex;
@@ -10,13 +10,14 @@
     align-items: center;
 }}
 .logo{
-    
+    padding-top: 16px;
+    padding-bottom: 16px;
     font-family: $secondary-font;
     color: $accent-cl;
     font-weight: 700;
     letter-spacing: 0.03em;
     transition:color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+   text-align: center;
     @media screen and (min-width:1200px) {
     padding-top: 24px;
     padding-bottom: 24px;
@@ -24,8 +25,7 @@
     line-height: calc(31 / 26);
     margin-right: 93px;}
   @media screen and (min-width:480px) {
-    padding-top: 16px;
-    padding-bottom: 16px;
+    
     font-size: 24px;
     line-height:calc(28 / 24);
   }
@@ -164,3 +164,4 @@ background-size: contain;
     color: currentColor;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
