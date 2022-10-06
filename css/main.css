@@ -330,7 +330,7 @@ p {
 }
 @media screen and (min-width: 1200px) {
   .hero__foto {
-    min-width: 1600px;
+    min-width: 1200px;
     min-height: 600px;
   }
 }
