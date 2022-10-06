@@ -308,6 +308,7 @@ p {
   margin-left: auto;
   margin-right: auto;
   min-height: 600px;
+  max-width: 1600px;
   background-repeat: no-repeat;
   background-color: rgb(47, 48, 58);
   text-align: center;
