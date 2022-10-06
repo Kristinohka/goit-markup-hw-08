@@ -1,6 +1,6 @@
 .goin{
   @media screen and (min-width: 1200px){
-        margin-left: 70px;
+        margin-right: 93px;
         align-items: baseline;
      }
     
@@ -21,7 +21,10 @@
   margin-bottom: 60px;
   justify-content: center;
 }
-}
+@media screen and (min-width:1200px){
+  display: flex;
+  justify-content: normal;
+}}
 .going__link{
     margin-right: 10px;;
 }
