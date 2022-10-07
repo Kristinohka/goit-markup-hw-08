@@ -17,13 +17,13 @@
     color: $main-text-cl;
     font-weight: 700;
     text-align: center;
-}
+
     
     @media screen and (min-width: 1200px){
     font-size: 36px;
     line-height: calc(42/36);
      margin-bottom: 50px;}
-}
+}}
 .team__list{
     display: flex;
     text-align: center;
@@ -38,8 +38,9 @@
         }
 }
 .team-item{
+    
     @media screen and (min-width: 768px){
-    width: 450px;}
+    max-width: 450px;}
      @media screen and (min-width: 768px){
     width: 354px;}
      @media screen and (min-width: 1200px){
