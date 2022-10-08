@@ -23,6 +23,7 @@ display: block;
 text-align: center;
 @media screen and (min-width: 1200px) {
    text-align: left;
+   
 }
 }
 .form__flex{
@@ -63,6 +64,7 @@ text-align: center;
     margin-bottom: 20px;
     @media screen and (min-width: 1200px) {
     width: 358px;
+    margin-bottom: 0;
   }
     &:hover,
     &:focus{
