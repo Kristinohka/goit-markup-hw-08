@@ -307,8 +307,6 @@ p {
 }
 
 .hero__foto {
-  padding-top: 118px;
-  padding-bottom: 118px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -323,6 +321,12 @@ p {
   height: 400px;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/sm-hero-img@1x.jpg");
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/sm-hero-img@1x.jpg");
+}
+@media screen and (max-width: 1199px) {
+  .hero__foto {
+    padding-top: 118px;
+    padding-bottom: 118px;
+  }
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero__foto {
@@ -1147,7 +1151,6 @@ p {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    padding-left: 76px;
     padding-right: 89px;
   }
 }
@@ -1181,6 +1184,7 @@ p {
   .contact-footer {
     margin-right: 165px;
     margin-bottom: 0;
+    margin-left: auto;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1199,6 +1203,9 @@ p {
 }
 
 .footer__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-orient: vertical;
@@ -1498,14 +1505,12 @@ p {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 30px;
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
 }
 
 .portfolio__item {
-  max-width: 450px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1516,7 +1521,6 @@ p {
 }
 @media screen and (min-width: 768px) {
   .portfolio__item {
-    width: 354px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1524,11 +1528,13 @@ p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    width: calc((100% - 60px) / 2);
+    margin: 15px;
   }
 }
 @media screen and (min-width: 1200px) {
   .portfolio__item {
-    width: 370px;
+    width: calc((100% - 90px) / 3);
   }
 }
 .portfolio__item:hover, .portfolio__item:focus {
@@ -1537,12 +1543,38 @@ p {
 }
 
 .portfolio__card-link {
+  margin-bottom: 30px;
+  height: 404px;
   display: inline-block;
   text-decoration: none;
   -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+  .portfolio__card-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 441px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio__card-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 441px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 .portfolio__card-link:hover, .portfolio__card-link:focus {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -1572,9 +1604,9 @@ p {
   letter-spacing: 0.03em;
   color: rgb(255, 255, 255);
   background-color: rgba(33, 150, 243, 0.9);
-  padding-top: 63px;
+  padding-top: 77px;
   padding-right: 24px;
-  padding-bottom: 63px;
+  padding-bottom: 77px;
   padding-left: 24px;
   width: 100%;
   height: 100%;
@@ -1582,6 +1614,11 @@ p {
           transform: translateY(100%);
   -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+  .portfolio__text-anime {
+    padding: 63px 24px;
+  }
 }
 
 .portfolio__text-card {
@@ -1594,7 +1631,6 @@ p {
 }
 
 .portfolio__heading {
-  margin-top: 0px;
   margin-bottom: 4px;
   font-style: normal;
   font-weight: 700;
