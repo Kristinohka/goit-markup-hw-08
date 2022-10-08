@@ -1517,9 +1517,6 @@ p {
 @media screen and (min-width: 768px) {
   .portfolio__item {
     width: 354px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1527,7 +1524,6 @@ p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 441px;
   }
 }
 @media screen and (min-width: 1200px) {
