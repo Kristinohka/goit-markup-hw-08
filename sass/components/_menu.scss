@@ -13,8 +13,8 @@ margin-top: 10px;
 margin-bottom: 10px;
   @media screen and (min-width:768px) {
 display: none;
-}
 
+}
 }
 .menu-container{
     position: fixed;
@@ -34,6 +34,9 @@ display: none;
     &.is-open{
         transform: translateX(0);
     }
+    @media screen and (min-width:768px) {
+display: none;
+}
 }
 
 .menu-toggle{
@@ -51,7 +54,7 @@ cursor: pointer;
 padding: 0;
 margin-left: auto;
 background-color: $title-cl;
-
+}
 
 .menu-icon{
     &:hover,
@@ -59,7 +62,7 @@ background-color: $title-cl;
     fill: $accent-cl;
 }
 }
-}
+
 .mobile__menu{
     display: flex;
     margin-bottom: auto;
@@ -69,6 +72,7 @@ background-color: $title-cl;
     font-weight: 500;
     line-height: calc(47/40);
     letter-spacing: 0.02em;
+    
 }
 .mobile__link{
 text-decoration: none;
