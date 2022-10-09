@@ -875,12 +875,8 @@ p {
 
 .team {
   background-color: rgb(245, 244, 250);
-}
-@media screen and (min-width: 480px) {
-  .team {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 @media screen and (min-width: 1200px) {
   .team {
@@ -1698,6 +1694,10 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-transition: opacity 1500ms, -webkit-transform 1500ms ease-in-out;
+  transition: opacity 1500ms, -webkit-transform 1500ms ease-in-out;
+  transition: transform 1500ms ease-in-out, opacity 1500ms;
+  transition: transform 1500ms ease-in-out, opacity 1500ms, -webkit-transform 1500ms ease-in-out;
 }
 .menu-container.is-open {
   -webkit-transform: translateX(0);
