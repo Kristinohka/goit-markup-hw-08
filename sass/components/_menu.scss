@@ -11,6 +11,11 @@ padding: 0;
 margin-left: auto;
 margin-top: 10px;
 margin-bottom: 10px;
+  transition: transform 1500ms ease-in-out, opacity 1500ms;
+    &:hover,
+&:focus{
+    fill: $accent-cl;
+}
   @media screen and (min-width:768px) {
 display: none;
 
@@ -54,13 +59,9 @@ cursor: pointer;
 padding: 0;
 margin-left: auto;
 background-color: $title-cl;
-}
-
-.menu-icon{
-    &:hover,
+&:hover,
 &:focus{
-    fill: $accent-cl;
-}
+    fill: $accent-cl;}
 }
 
 .mobile__menu{
@@ -80,6 +81,10 @@ color: $main-text-cl;
 &.current{
     color: $accent-cl;
 }
+&:hover,
+&:focus{
+    color: $accent-cl;}
+    
 }
 .mobile__contacts{
 display: flex;    
@@ -89,11 +94,14 @@ flex-direction: column;
 font-size: 24px;
 font-weight: 500;
 line-height: calc(40/24);
-letter-spacing: 0.2em;
+
 
 &-link{
 text-decoration: none;
 color:$link-cl ;
+&:hover,
+&:focus{
+    color: $accent-cl;}
 }
 }
 

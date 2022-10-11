@@ -11,10 +11,11 @@
     }
  }  
  .portfolio__button-list{
+    gap: 8px;
     display: flex;
     cursor: pointer;
     margin-bottom: 40px;
-    gap:8px;
+    row-gap:15px;
     flex-wrap: wrap;
     @media screen and(min-width:768px){
       justify-content: center;

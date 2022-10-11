@@ -39,11 +39,15 @@ img {
 }
 
 .container {
-  width: 480px;
   margin-left: auto;
   margin-right: auto;
   padding-right: 15px;
   padding-left: 15px;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
 }
 @media screen and (min-width: 768px) {
   .container {
@@ -1357,6 +1361,7 @@ img {
 @media screen and (min-width: 1200px) {
   .form__mail-block {
     margin-right: 12px;
+    margin-bottom: 0;
   }
 }
 
@@ -1438,12 +1443,13 @@ img {
 }
 
 .portfolio__button-list {
+  gap: 8px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   cursor: pointer;
   margin-bottom: 40px;
-  gap: 8px;
+  row-gap: 15px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -1646,6 +1652,13 @@ img {
   margin-left: auto;
   margin-top: 10px;
   margin-bottom: 10px;
+  -webkit-transition: opacity 1500ms, -webkit-transform 1500ms ease-in-out;
+  transition: opacity 1500ms, -webkit-transform 1500ms ease-in-out;
+  transition: transform 1500ms ease-in-out, opacity 1500ms;
+  transition: transform 1500ms ease-in-out, opacity 1500ms, -webkit-transform 1500ms ease-in-out;
+}
+.menu__button:hover, .menu__button:focus {
+  fill: rgb(33, 150, 243);
 }
 @media screen and (min-width: 768px) {
   .menu__button {
@@ -1712,8 +1725,7 @@ img {
   margin-left: auto;
   background-color: rgb(255, 255, 255);
 }
-
-.menu-icon:hover, .menu-icon:focus {
+.menu-toggle:hover, .menu-toggle:focus {
   fill: rgb(33, 150, 243);
 }
 
@@ -1740,6 +1752,9 @@ img {
 .mobile__link.current {
   color: rgb(33, 150, 243);
 }
+.mobile__link:hover, .mobile__link:focus {
+  color: rgb(33, 150, 243);
+}
 
 .mobile__contacts {
   display: -webkit-box;
@@ -1754,11 +1769,13 @@ img {
   font-size: 24px;
   font-weight: 500;
   line-height: 1.6666666667;
-  letter-spacing: 0.2em;
 }
 .mobile__contacts-link {
   text-decoration: none;
   color: rgb(117, 117, 117);
+}
+.mobile__contacts-link:hover, .mobile__contacts-link:focus {
+  color: rgb(33, 150, 243);
 }
 
 .mobile-accent {
